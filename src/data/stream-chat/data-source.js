@@ -26,6 +26,6 @@ export default class StreamChat extends RESTDataSource {
         const authId = createGlobalId(currentPerson.id, "AuthenticatedUser")
         const { chatClient } = this
 
-        return chatClient.createToken(authId)
+        return chatClient.createToken(authId.split(":")[1])
     }
 }
